@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import Header from './Header';
+import CardContainer from './CardContainer';
+import AdventureTimeLandingScreen from './AdventureTimeLandingScreen'
 const App = () => {
   const [cardArray, setCardArray] = useState([]);
 
@@ -17,9 +19,12 @@ const App = () => {
   };
 
   return (
-    <div>
-      <button onClick={getCardInfo}>Hello, Adventure Time</button>
-    </div>
+    // <div>
+    //   <Header />
+    //   <button onClick={getCardInfo}>Hello, Adventure Time</button>
+    //   <CardContainer />
+    // </div>
+    <AdventureTimeLandingScreen />
   );
 };
 
