@@ -1,0 +1,19 @@
+{
+  "name": "adventure-time-game",
+  "version": "1.0.0",
+  "description": "Memory game with adventure time theme",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blain-crawford/adventure-time-game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blain-crawford/adventure-time-game/issues"
+  },
+  "homepage": "https://github.com/blain-crawford/adventure-time-game#readme"
+}
