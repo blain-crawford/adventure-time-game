@@ -1,6 +1,8 @@
 import { maxWidth } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import adventureTimeFriends from './images/adventure-time-friends.jpeg';
+import ReactAudioPlayer from 'react-audio-player';
+import landingTheme from './music/landing-theme.mp3'
 
 const AdventureTimeLandingScreen = ({playGame}) => {
   return (
@@ -10,6 +12,10 @@ const AdventureTimeLandingScreen = ({playGame}) => {
         style={{ width: '50%', height: '50%', margin: '0 auto' }}
       />
       <button onClick={playGame} style={{width: '10%', margin: '20px auto'}}>Play Game</button>
+      <ReactAudioPlayer 
+        src={landingTheme}
+        autoPlay
+      />
     </div>
   );
 };

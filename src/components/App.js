@@ -38,7 +38,6 @@ const App = () => {
     return (
       <div>
         <Header />
-        <button onClick={getCardInfo}>Hello, Adventure Time</button>
         <CardContainer 
           cardArray={cardArray}
         />

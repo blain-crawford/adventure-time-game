@@ -4,14 +4,16 @@ const CardContainer = ({cardArray}) => {
   return (
     <div>
       <h1>Is Card Container!</h1>
-      {cardArray.map((card, cardIndex) => {
-        return (
-          <Card 
-          key={cardIndex}
-          cardImage={card.sprite} 
-          />
-        )
-      })}
+      <div style={{display: 'flex', justifyContent: 'center'}}>
+        {cardArray.map((card, cardIndex) => {
+          return (
+            <Card 
+            key={cardIndex}
+            cardImage={card.sprite} 
+            />
+          )
+        })}
+      </div>
     </div>
   );
 };
