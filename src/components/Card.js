@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
-const Card = () => {
+const Card = ({ cardImage }) => {
   return (
     <div>
-      <h1>Is Card!</h1>
+      <img src={cardImage} />
     </div>
-  )
-}
+  );
+};
 
 export default Card;
