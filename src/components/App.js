@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-
 const App = () => {
   const [cardArray, setCardArray] = useState([]);
 
-  return(
-    <div>
-      <h1>Hello, Adventure Time</h1>
-    </div>
-  )
-}
+  const getCardInfo = () => {
+    axios
+      .get('https://adventure-time-api.herokuapp.com/api/v1/characters')
+      .then((details) => {
+        console.log(details);
+        setCardArray(details);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-export default App
+  return (
+    <div>
+      <button onClick={getCardInfo}>Hello, Adventure Time</button>
+    </div>
+  );
+};
+
+export default App;
