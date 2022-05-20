@@ -15,5 +15,24 @@
   "bugs": {
     "url": "https://github.com/blain-crawford/adventure-time-game/issues"
   },
-  "homepage": "https://github.com/blain-crawford/adventure-time-game#readme"
+  "homepage": "https://github.com/blain-crawford/adventure-time-game#readme",
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/icons-material": "^5.8.0",
+    "@mui/material": "^5.8.0",
+    "@mui/system": "^5.8.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-react": "^7.17.12",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.5",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.0"
+  }
 }
