@@ -10,9 +10,28 @@ import {
 import { Typography } from '@mui/material';
 import './mui-styles/fonts.css';
 
-const Card = ({ cardImage, cardName, cardSpecies, cardQuotes }) => {
+const Card = ({
+  cardImage,
+  cardName,
+  cardSpecies,
+  cardQuotes,
+  chosen,
+  wasChosen,
+  id
+}) => {
+
+  useEffect(() => {
+    console.log('it\'s working!')
+  }, [chosen])
+  
   return (
-    <StyledCard>
+    <StyledCard
+      id={id}
+      chosen={chosen}
+      onClick={(e) => {
+        wasChosen(e.currentTarget.id);
+      }}
+    >
       <StyledInnerCard>
         <StyledCardHeader>
           <StyledCardText
@@ -29,11 +48,7 @@ const Card = ({ cardImage, cardName, cardSpecies, cardQuotes }) => {
           image={cardImage}
           alt={cardName}
         />
-        <StyledCardText
-          className='card-font'
-        >
-          {cardSpecies}
-        </StyledCardText>
+        <StyledCardText className='card-font'>{cardSpecies}</StyledCardText>
         <StyledCardContent>
           <StyledCardText className='card-font'>
             {cardQuotes[Math.floor(Math.random() * cardQuotes.length)]}

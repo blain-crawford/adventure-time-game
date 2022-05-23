@@ -8,6 +8,12 @@ const App = () => {
   const [cardArray, setCardArray] = useState([]);
   const [screen, setScreen] = useState('landing');
 
+
+  const shuffleCards = (cardArray) => {
+    cardArray.sort(() => Math.random() - 0.5);
+    setCardArray(cardArray);
+  }
+
   const playGame = () => {
     setScreen('play');
     getCardInfo();
@@ -15,6 +21,7 @@ const App = () => {
 
   const returnToTitle = () => {
     setScreen('landing');
+    getCardInfo();
   };
 
   const getCardInfo = () => {
@@ -22,12 +29,25 @@ const App = () => {
       .get('https://adventure-time-api.herokuapp.com/api/v1/characters')
       .then((details) => {
         console.log(details);
-        setCardArray(details.data);
+        shuffleCards(details.data);
       })
       .catch((error) => {
         console.log(error);
       });
   };
+
+
+  const wasChosen = (cardIndex) => {
+    let newCardArray = [...cardArray];
+    if (!newCardArray[cardIndex].chosen) {
+      newCardArray[cardIndex].chosen = 'chosen';
+      shuffleCards(newCardArray);
+      console.log(cardArray);
+    } else {
+      console.log('App working')
+    }
+    
+  }
 
   if (screen === 'landing') {
     return <AdventureTimeLandingScreen 
@@ -40,6 +60,7 @@ const App = () => {
         <Header />
         <CardContainer 
           cardArray={cardArray}
+          wasChosen={wasChosen}
         />
         <button onClick={returnToTitle}>Return to Title</button>
       </div>
