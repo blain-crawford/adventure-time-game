@@ -28,9 +28,9 @@ export const StyledLandingPage = styled('div', {
 export const StyledLandingPageImage = styled('img', {
   name: 'StyledLandingPageImage',
 })({
-  width: '50%',
+  width: '40%',
   padding: '50px',
-  height: '65%',
+  height: '55%',
   margin: '50px auto 0 auto',
   border: '2px solid white',
   borderRadius: '20px',

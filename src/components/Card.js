@@ -1,23 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import {
   StyledCard,
+  StyledInnerCard,
+  StyledCardHeader,
   StyledCardImage,
   StyledCardContent,
+  StyledCardText,
 } from './mui-styles/cardStyles';
 import { Typography } from '@mui/material';
+import './mui-styles/fonts.css';
 
 const Card = ({ cardImage, cardName, cardSpecies, cardQuotes }) => {
   return (
     <StyledCard>
-      <StyledCardImage component='img' image={cardImage} alt={cardName} />
-      <StyledCardContent>
-        <Typography gutterBottom variant='h5' component='div'>
-          {cardName}
-        </Typography>
-        <Typography variant='body2' color='text.secondary'>
-          {cardQuotes[0]}
-        </Typography>
-      </StyledCardContent>
+      <StyledInnerCard>
+        <StyledCardHeader>
+          <StyledCardText
+            style={{ padding: '0', margin: '0' }}
+            className='adventure-font'
+            component='div'
+          >
+            {cardName}
+          </StyledCardText>
+        </StyledCardHeader>
+        <StyledCardImage
+          component='img'
+          height='200'
+          image={cardImage}
+          alt={cardName}
+        />
+        <StyledCardText
+          className='card-font'
+        >
+          {cardSpecies}
+        </StyledCardText>
+        <StyledCardContent>
+          <StyledCardText className='card-font'>
+            {cardQuotes[Math.floor(Math.random() * cardQuotes.length)]}
+          </StyledCardText>
+        </StyledCardContent>
+      </StyledInnerCard>
     </StyledCard>
   );
 };
