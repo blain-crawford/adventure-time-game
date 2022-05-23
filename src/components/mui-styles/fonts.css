@@ -1,0 +1,8 @@
+@font-face {
+  font-family: adventureFont;
+  src: url(../fonts/adventure-font.ttf);
+}
+
+.adventure-font {
+  font-family: adventureFont;
+}

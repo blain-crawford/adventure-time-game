@@ -1,22 +1,31 @@
-import { maxWidth } from '@mui/system';
 import React, { useState, useEffect } from 'react';
 import adventureTimeFriends from './images/adventure-time-friends.jpeg';
 import ReactAudioPlayer from 'react-audio-player';
-import landingTheme from './music/landing-theme.mp3'
+import landingTheme from './music/landing-theme.mp3';
+import {
+  StyledLandingPage,
+  StyledLandingPageImage,
+  StyledStartButton,
+} from './mui-styles/landingScreenStyles';
+import './mui-styles/fonts.css';
 
-const AdventureTimeLandingScreen = ({playGame}) => {
+const AdventureTimeLandingScreen = ({ playGame, screen }) => {
+
   return (
-    <div style={{ width: '100vw', height: '100vh',display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: '#703199' }}>
-      <img
+    <StyledLandingPage id='opening-screen'>
+      <StyledLandingPageImage
         src={adventureTimeFriends}
-        style={{ width: '50%', height: '50%', margin: '0 auto' }}
+        alt='Adventure time with Finn and Jake'
       />
-      <button onClick={playGame} style={{margin: '20px auto', padding: '5px 30px 5px 30px'}}>Play Game</button>
-      {/* <ReactAudioPlayer 
-        src={landingTheme}
-        autoPlay
-      /> */}
-    </div>
+      <StyledStartButton
+        onClick={playGame}
+        id='start-game-button'
+        className='adventure-font'
+      >
+        CLICK HERE TO START
+      </StyledStartButton>
+      <ReactAudioPlayer src={landingTheme} autoPlay />
+    </StyledLandingPage>
   );
 };
 
