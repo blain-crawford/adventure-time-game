@@ -7,7 +7,6 @@ import {
   StyledCardContent,
   StyledCardText,
 } from './mui-styles/cardStyles';
-import { Typography } from '@mui/material';
 import './mui-styles/fonts.css';
 
 const Card = ({
@@ -23,7 +22,7 @@ const Card = ({
   useEffect(() => {
     console.log('it\'s working!')
   }, [chosen])
-  
+
   return (
     <StyledCard
       id={id}
