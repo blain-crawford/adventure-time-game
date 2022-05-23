@@ -7,12 +7,12 @@ import AdventureTimeLandingScreen from './AdventureTimeLandingScreen';
 const App = () => {
   const [cardArray, setCardArray] = useState([]);
   const [screen, setScreen] = useState('landing');
-
+  const [score, setScore] = useState(0);
 
   const shuffleCards = (cardArray) => {
     cardArray.sort(() => Math.random() - 0.5);
     setCardArray(cardArray);
-  }
+  };
 
   const playGame = () => {
     setScreen('play');
@@ -23,6 +23,13 @@ const App = () => {
     setScreen('landing');
     getCardInfo();
   };
+
+  const checkForWin = (score) => {
+    if (score === 8) {
+      setScreen('win');
+      setScore(0)
+    }
+  }
 
   const getCardInfo = () => {
     axios
@@ -36,35 +43,35 @@ const App = () => {
       });
   };
 
-
   const wasChosen = (cardIndex) => {
     let newCardArray = [...cardArray];
     if (!newCardArray[cardIndex].chosen) {
       newCardArray[cardIndex].chosen = 'chosen';
       shuffleCards(newCardArray);
-      console.log(cardArray);
+      setScore(score + 1);
+      console.log(score)
+      checkForWin(score)
     } else {
-      console.log('App working')
+      console.log('App working');
+      setScore(0);
+      getCardInfo();
     }
-    
-  }
+  };
 
   if (screen === 'landing') {
-    return <AdventureTimeLandingScreen 
-    screen={screen} 
-    playGame={playGame} 
-    />;
+    return <AdventureTimeLandingScreen screen={screen} playGame={playGame} />;
   } else if (screen === 'play') {
     return (
       <div>
-        <Header />
-        <CardContainer 
-          cardArray={cardArray}
-          wasChosen={wasChosen}
+        <Header 
+          score={score}
         />
+        <CardContainer cardArray={cardArray} wasChosen={wasChosen} />
         <button onClick={returnToTitle}>Return to Title</button>
       </div>
     );
+  } else if (screen === 'win') {
+    return <button onClick={returnToTitle}>Return to Title</button>;
   }
 };
 

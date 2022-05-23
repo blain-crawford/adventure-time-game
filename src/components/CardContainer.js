@@ -5,7 +5,7 @@ const CardContainer = ({cardArray, wasChosen}) => {
   return (
     <div>
       <div style={{display: 'flex', justifyContent: 'center',
-    flexWrap: 'wrap'}}>
+    flexWrap: 'wrap', width: '60%', margin: '0 auto'}}>
         {cardArray.map((card, cardIndex) => {
           return (
             <Card 

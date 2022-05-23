@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
-const Header = () => {
+const Header = ({ score }) => {
   return (
     <div>
-      <h1>Is Header!</h1>
+      <h1>Score: {score}</h1>
     </div>
   );
 };
