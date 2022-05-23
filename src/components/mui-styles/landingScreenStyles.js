@@ -2,25 +2,6 @@ import { styled, createTheme } from '@mui/system';
 import { keyframes } from '@mui/styled-engine';
 import adventureFont from '../fonts/adventure-font.ttf';
 
-// export const theme = createTheme({
-//   typography: {
-//     fontFamily: 'adventure, font',
-//   },
-//   components: {
-//     MuiCssBaseline: {
-//       styleOverrides: `
-//         @font-face {
-//           font-family: 'adventureFont';
-//           font-style: normal;
-//           font-display: swap;
-//           font-weight: 400;
-//           src: local('adventureFont'), local('adventure-font'), url(${adventureFont}) format('ttf');
-//         }
-//       `,
-//     },
-//   },
-// });
-
 const blink = keyframes`
   from {
     border: 1px solid #703199;
@@ -50,7 +31,7 @@ export const StyledLandingPageImage = styled('img', {
   width: '50%',
   padding: '50px',
   height: '65%',
-  margin: '0 auto',
+  margin: '50px auto 0 auto',
   border: '2px solid white',
   borderRadius: '20px',
   animation: `${blink} 1s infinite ease`,
