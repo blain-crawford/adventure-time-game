@@ -6,16 +6,16 @@ import landingTheme from './music/landing-theme.mp3'
 
 const AdventureTimeLandingScreen = ({playGame}) => {
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+    <div style={{ width: '100vw', height: '100vh',display: 'flex', flexDirection: 'column', justifyContent: 'center', backgroundColor: '#703199' }}>
       <img
         src={adventureTimeFriends}
         style={{ width: '50%', height: '50%', margin: '0 auto' }}
       />
-      <button onClick={playGame} style={{width: '10%', margin: '20px auto'}}>Play Game</button>
-      <ReactAudioPlayer 
+      <button onClick={playGame} style={{margin: '20px auto', padding: '5px 30px 5px 30px'}}>Play Game</button>
+      {/* <ReactAudioPlayer 
         src={landingTheme}
         autoPlay
-      />
+      /> */}
     </div>
   );
 };
