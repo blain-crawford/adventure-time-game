@@ -24,7 +24,7 @@ const AdventureTimeLandingScreen = ({ playGame, screen }) => {
       >
         CLICK HERE TO START
       </StyledStartButton>
-      <ReactAudioPlayer src={landingTheme} autoPlay />
+      {/* <ReactAudioPlayer src={landingTheme} autoPlay /> */}
     </StyledLandingPage>
   );
 };
