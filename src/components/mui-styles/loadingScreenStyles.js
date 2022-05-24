@@ -47,7 +47,7 @@ export const StyledLoadingFont = styled('h1', {
   name: 'StyledLoadingFont'
 }) ({
   color: 'white',
-  // margin: '0',
+  margin: '0',
   padding: '0'
 })
 

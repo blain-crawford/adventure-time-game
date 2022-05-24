@@ -4,7 +4,7 @@ import Header from './Header';
 import CardContainer from './CardContainer';
 import AdventureTimeLandingScreen from './AdventureTimeLandingScreen';
 import AdventureTimeLoadingScreen from './AdventureTImeLoadingScreen';
-
+import gameBoard from './images/gameboard.jpeg';
 const App = () => {
   const [cardArray, setCardArray] = useState([]);
   const [screen, setScreen] = useState('landing');
@@ -17,12 +17,11 @@ const App = () => {
 
   const playGame = () => {
     setScreen('loading');
-    getCardInfo();
+    setTimeout(getCardInfo, 2000);
   };
 
   const returnToTitle = () => {
     setScreen('landing');
-    getCardInfo();
   };
 
   const checkForWin = (score) => {
@@ -66,7 +65,7 @@ const App = () => {
     return <AdventureTimeLoadingScreen screen={screen} playGame={playGame} />;
   } else if (screen === 'play') {
     return (
-      <div>
+      <div style={{backgroundImage: `url(${gameBoard})`, backgroundSize: 'cover', margin: '0', padding: '0'}}>
         <Header score={score} />
         <CardContainer cardArray={cardArray} wasChosen={wasChosen} />
         <button onClick={returnToTitle}>Return to Title</button>
