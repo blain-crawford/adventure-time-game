@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { StyledCard, StyledBackOfCard } from './mui-styles/cardStyles';
 import './mui-styles/fonts.css';
-import './mui-styles/flip.css'
+import './mui-styles/flip.css';
 
-const CardBack = ({ cardName, id }) => {
+const CardBack = ({ id }) => {
   return (
     <StyledCard id={id} className='flip-back'>
       <StyledBackOfCard />

@@ -25,28 +25,27 @@ const CardContainer = ({ cardArray, wasChosen }) => {
         {cardArray.map((card, cardIndex) => {
           if (flipped) {
             return (
-                  <Card
-                    id={cardIndex}
-                    key={cardIndex}
-                    cardImage={card.sprite}
-                    cardName={card.displayName}
-                    cardSpecies={card.species}
-                    cardQuotes={card.quotes}
-                    chosen={card.chosen}
-                    wasChosen={wasChosen}
-                    flipCards={flipCards}
-                  />
+              <Card
+                id={cardIndex}
+                key={cardIndex}
+                cardImage={card.sprite}
+                cardName={card.displayName}
+                cardSpecies={card.species}
+                cardQuotes={card.quotes}
+                chosen={card.chosen}
+                wasChosen={wasChosen}
+                flipCards={flipCards}
+              />
             );
           } else if (!flipped) {
             return (
-                  <CardBack
-                    className='c'
-                    id={cardIndex}
-                    key={cardIndex}
-                    cardName={card.displayName}
-                  />
+              <CardBack
+                className='c'
+                id={cardIndex}
+                key={cardIndex}
+                cardName={card.displayName}
+              />
             );
-          
           }
         })}
       </div>
