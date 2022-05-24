@@ -1,4 +1,4 @@
-import { styled, createTheme } from '@mui/system';
+import { styled } from '@mui/system';
 import { keyframes } from '@mui/styled-engine';
 import adventureFont from '../fonts/adventure-font.ttf';
 

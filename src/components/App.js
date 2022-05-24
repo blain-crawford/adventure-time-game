@@ -3,6 +3,7 @@ import axios from 'axios';
 import Header from './Header';
 import CardContainer from './CardContainer';
 import AdventureTimeLandingScreen from './AdventureTimeLandingScreen';
+import AdventureTimeLoadingScreen from './AdventureTImeLoadingScreen';
 
 const App = () => {
   const [cardArray, setCardArray] = useState([]);
@@ -15,7 +16,7 @@ const App = () => {
   };
 
   const playGame = () => {
-    setScreen('play');
+    setScreen('loading');
     getCardInfo();
   };
 
@@ -27,14 +28,15 @@ const App = () => {
   const checkForWin = (score) => {
     if (score === 8) {
       setScreen('win');
-      setScore(0)
+      setScore(0);
     }
-  }
+  };
 
   const getCardInfo = () => {
     axios
       .get('https://adventure-time-api.herokuapp.com/api/v1/characters')
       .then((details) => {
+        setScreen('play');
         console.log(details);
         shuffleCards(details.data);
       })
@@ -49,8 +51,8 @@ const App = () => {
       newCardArray[cardIndex].chosen = 'chosen';
       shuffleCards(newCardArray);
       setScore(score + 1);
-      console.log(score)
-      checkForWin(score)
+      console.log(score);
+      checkForWin(score);
     } else {
       console.log('App working');
       setScore(0);
@@ -60,12 +62,12 @@ const App = () => {
 
   if (screen === 'landing') {
     return <AdventureTimeLandingScreen screen={screen} playGame={playGame} />;
+  } else if (screen === 'loading') {
+    return <AdventureTimeLoadingScreen screen={screen} playGame={playGame} />;
   } else if (screen === 'play') {
     return (
       <div>
-        <Header 
-          score={score}
-        />
+        <Header score={score} />
         <CardContainer cardArray={cardArray} wasChosen={wasChosen} />
         <button onClick={returnToTitle}>Return to Title</button>
       </div>
