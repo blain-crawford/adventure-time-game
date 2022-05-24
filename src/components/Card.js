@@ -8,7 +8,7 @@ import {
   StyledCardText,
 } from './mui-styles/cardStyles';
 import './mui-styles/fonts.css';
-
+import './mui-styles/flip.css';
 const Card = ({
   cardImage,
   cardName,
@@ -16,19 +16,22 @@ const Card = ({
   cardQuotes,
   chosen,
   wasChosen,
-  id
+  id,
+  flipCards,
 }) => {
-
   useEffect(() => {
-    console.log('it\'s working!')
-  }, [chosen])
+    console.log("it's working!");
+  }, [chosen]);
 
   return (
     <StyledCard
+      className='flip'
       id={id}
       chosen={chosen}
       onClick={(e) => {
-        wasChosen(e.currentTarget.id);
+        setTimeout(flipCards, 1000);
+        flipCards();
+        setTimeout(wasChosen(e.currentTarget.id), 5000);
       }}
     >
       <StyledInnerCard>

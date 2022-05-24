@@ -1,0 +1,30 @@
+.flip {
+  animation: rotateY 0.5s;
+}
+
+@-webkit-keyframes rotateY {
+  0% {
+    
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+  
+}
+
+.flip-back {
+  animation: rotate-back-Y .5s;
+}
+
+@-webkit-keyframes rotate-back-Y {
+  0% {
+    transform: rotateY(180deg);
+  }
+  50% {
+    transform: rotateY(120deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
