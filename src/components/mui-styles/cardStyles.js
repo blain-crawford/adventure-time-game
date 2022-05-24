@@ -4,14 +4,14 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import cardBackground from '../images/card-background.jpeg';
-
+import adventureLogo from '../images/adventure_time_logo.jpeg';
 export const StyledCard = styled(Card, {
   name: 'StyledCard'
 }) ({
   color: 'white',
   backgroundColor: '#703199',
   width: '300px',
-  height: 'auto',
+  height: '500px',
   padding: '15px',
   display: 'flex',
   flexDirection: 'column',
@@ -20,7 +20,7 @@ export const StyledCard = styled(Card, {
   textAlign: 'center',
   border: '1px solid purple',
   borderRadius: '20px',
-  margin: '10px'
+  margin: '10px',
 })
 
 export const StyledInnerCard = styled('div', {
@@ -32,6 +32,19 @@ export const StyledInnerCard = styled('div', {
   boxShadow: '0px 0px 2px 1px rgba(255,255,255,0.78)',
   padding: '20px',
   borderRadius: '5px',
+})
+
+export const StyledBackOfCard = styled('div', {
+  name: 'StyledBackOfCard'
+}) ({
+  backgroundImage: `url(${adventureLogo})`, 
+  backgroundSize: '100% 100%',
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  border: '1px solid white',
+  boxShadow: '0px 0px 2px 1px rgba(255,255,255,0.78)',
+  borderRadius: '5px',
+  height: '500px'
 })
 
 export const StyledCardHeader = styled(CardContent, {

@@ -20,3 +20,19 @@
   margin: 0;
   padding: 0;
 }
+
+.front,
+.back {
+  background-size: cover;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: center;
+}
+
+.back {
+  background-image: url(../images/adventure_time_logo.jpeg);
+}
