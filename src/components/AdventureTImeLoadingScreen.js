@@ -22,7 +22,7 @@ const AdventureTimeLoadingScreen = ({ playGame, screen }) => {
         <StyledLoadingFont className='adventure-font'>
           Loading your cards Bro!
         </StyledLoadingFont>
-        <div style={{display: 'flex', flexDirection: 'row', }}>
+        <div style={{ display: 'flex', flexDirection: 'row' }}>
           <StyledLoadingDot1></StyledLoadingDot1>
           <StyledLoadingDot2></StyledLoadingDot2>
           <StyledLoadingDot3></StyledLoadingDot3>

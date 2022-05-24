@@ -1,10 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import {
+  StyledTitleButton,
+  StyledHeader,
+  StyledScore,
+} from './mui-styles/headerStyles';
 
-const Header = ({ score }) => {
+const Header = ({ score, returnToTitle }) => {
   return (
-    <div style={{backgroundColor: 'blue', padding: '0', margin: '0'}}>
-      <h1 style={{margin: '0', padding: '0'}}>Score: {score}</h1>
-    </div>
+    <StyledHeader>
+      <StyledScore className='card-font'>Score: {score}</StyledScore>
+      <StyledTitleButton
+        id='return-to-title-button'
+        className='adventure-font'
+        onClick={returnToTitle}
+      >
+        Return to Title
+      </StyledTitleButton>
+    </StyledHeader>
   );
 };
 

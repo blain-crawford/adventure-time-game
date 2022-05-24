@@ -10,7 +10,6 @@ import {
 import './mui-styles/fonts.css';
 
 const AdventureTimeLandingScreen = ({ playGame, screen }) => {
-
   return (
     <StyledLandingPage id='opening-screen'>
       <StyledLandingPageImage
@@ -24,7 +23,7 @@ const AdventureTimeLandingScreen = ({ playGame, screen }) => {
       >
         CLICK HERE TO START
       </StyledStartButton>
-      <ReactAudioPlayer src={landingTheme} autoPlay/>
+      <ReactAudioPlayer src={landingTheme} autoPlay />
     </StyledLandingPage>
   );
 };

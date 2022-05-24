@@ -34,38 +34,38 @@ export const StyledLoadingPageImage = styled('img', {
 });
 
 export const StyledLoadingDiv = styled('div', {
-  name: 'StyledLoadingDiv'
-}) ({
+  name: 'StyledLoadingDiv',
+})({
   margin: '0 auto',
   display: 'flex',
   flexDirection: 'column',
   alignItems: 'center',
   justifyContent: 'center',
-})
+});
 
 export const StyledLoadingFont = styled('h1', {
-  name: 'StyledLoadingFont'
-}) ({
+  name: 'StyledLoadingFont',
+})({
   color: 'white',
   margin: '0',
-  padding: '0'
-})
+  padding: '0',
+});
 
 export const StyledLoadingDot1 = styled('div', {
-  name: 'StyledLoadingDot1'
-}) ({
+  name: 'StyledLoadingDot1',
+})({
   backgroundColor: 'white',
   animation: `${loading} 1s infinite ease-in-out`,
   width: '15px',
   height: '15px',
   borderRadius: '50%',
   marginRight: '10px',
-  padding: '0'
-})
+  padding: '0',
+});
 
 export const StyledLoadingDot2 = styled('div', {
-  name: 'StyledLoadingDot2'
-}) ({
+  name: 'StyledLoadingDot2',
+})({
   backgroundColor: 'white',
   animation: `${loading} 1.1s infinite ease-in-out`,
   width: '15px',
@@ -73,16 +73,16 @@ export const StyledLoadingDot2 = styled('div', {
   borderRadius: '50%',
   marginRight: '10px',
   padding: '0',
-})
+});
 
 export const StyledLoadingDot3 = styled('div', {
-  name: 'StyledLoadingDot3'
-}) ({
+  name: 'StyledLoadingDot3',
+})({
   backgroundColor: 'white',
   animation: `${loading} 1.2s infinite ease-in-out`,
   width: '15px',
   height: '15px',
   borderRadius: '50%',
   marginRight: '10px',
-  padding: '0'
-})
+  padding: '0',
+});
