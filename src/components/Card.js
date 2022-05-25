@@ -19,10 +19,6 @@ const Card = ({
   id,
   flipCards,
 }) => {
-  useEffect(() => {
-    console.log("it's working!");
-  }, [chosen]);
-
   return (
     <StyledCard
       className='flip'

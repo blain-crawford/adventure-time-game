@@ -1,5 +1,4 @@
 import { styled } from '@mui/system';
-import adventureFont from '../fonts/adventure-font.ttf';
 
 export const StyledHeader = styled('div', {
   name: 'StyledHeader',
@@ -9,7 +8,7 @@ export const StyledHeader = styled('div', {
   padding: '10px',
   margin: '5px',
   position: 'fixed',
-  width: '95%',
+  width: '99%',
 });
 
 export const StyledTitleButton = styled('button', {
@@ -17,7 +16,8 @@ export const StyledTitleButton = styled('button', {
 })({
   fontSize: '30px',
   padding: '5px 30px 5px 30px',
-  fontFamily: adventureFont,
+  marginRight: '20px',
+  marginTop: '15px'
 });
 
 export const StyledScore = styled('h1', {

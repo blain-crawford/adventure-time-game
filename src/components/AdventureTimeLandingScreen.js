@@ -9,7 +9,7 @@ import {
 } from './mui-styles/landingScreenStyles';
 import './mui-styles/fonts.css';
 
-const AdventureTimeLandingScreen = ({ playGame, screen }) => {
+const AdventureTimeLandingScreen = ({ playGame }) => {
   return (
     <StyledLandingPage id='opening-screen'>
       <StyledLandingPageImage

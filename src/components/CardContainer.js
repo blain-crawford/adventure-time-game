@@ -8,7 +8,6 @@ const CardContainer = ({ cardArray, wasChosen }) => {
 
   const flipCards = () => {
     setFlipped((flipped) => !flipped);
-    console.log(flipped);
   };
 
   return (

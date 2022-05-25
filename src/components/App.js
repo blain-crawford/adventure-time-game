@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from './Header';
 import CardContainer from './CardContainer';
@@ -18,7 +18,6 @@ const App = () => {
 
   const playGame = () => {
     setScreen('loading');
-    setTimeout(getCardInfo, 2000);
   };
 
   const returnToTitle = () => {
@@ -32,16 +31,21 @@ const App = () => {
     }
   };
 
+  useEffect(() => {
+    if (screen === 'loading') {
+      setTimeout(getCardInfo, 3000);
+    }
+  }, [screen]);
+
   const getCardInfo = () => {
     axios
       .get('https://adventure-time-api.herokuapp.com/api/v1/characters')
       .then((details) => {
         setScreen('play');
-        console.log(details);
         shuffleCards(details.data);
       })
       .catch((error) => {
-        console.log(error);
+        alert("Cards couldn't load Bro!  Refresh to try again!");
       });
   };
 
@@ -51,10 +55,8 @@ const App = () => {
       newCardArray[cardIndex].chosen = 'chosen';
       shuffleCards(newCardArray);
       setScore(score + 1);
-      console.log(score);
       checkForWin(score);
     } else {
-      console.log('App working');
       setScore(0);
       getCardInfo();
     }

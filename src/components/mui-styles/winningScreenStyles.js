@@ -2,23 +2,36 @@ import { styled } from '@mui/system';
 import { keyframes } from '@mui/styled-engine';
 import winningBackground from '../images/winning-screen.png';
 
-const blink = keyframes`
+const spin = keyframes`
   from {
-    border: 1px solid #703199;
-    transition: .5s ease-in-out;
+    width: 0vw;
+    height: 0vw
+    transform: rotate(0deg);
+    transition: 5s ease-in-out;
   }
   to {
-    box-shadow: 0px 0px 90px 17px rgba(255,255,255,0.78);
-    border: 1px solid white;
-    transition: .5s ease-in-out;
+    width: '50vw';
+    height: '50vh';
+    transform: rotate(1440deg);
+    transition: 5s ease-in-out;
   }
 `;
+
+const visible = keyframes`
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`
 
 export const StyledWinningPage = styled('div', {
   name: 'StyledLandingPage',
 })({
   width: '100vw',
   height: '100vh',
+  margin: '0 auto',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -27,18 +40,7 @@ export const StyledWinningPage = styled('div', {
   backgroundSize: 'contain',
   backgroundPosition: 'center',
   backgroundColor: '#41407b',
-});
-
-export const StyledLandingPageImage = styled('img', {
-  name: 'StyledLandingPageImage',
-})({
-  width: '40%',
-  padding: '50px',
-  height: '55%',
-  margin: '50px auto 0 auto',
-  border: '2px solid white',
-  borderRadius: '20px',
-  animation: `${blink} 1s infinite ease`,
+  animation: `${spin} 5s`,
 });
 
 export const StyledStartButton = styled('button', {
@@ -49,4 +51,5 @@ export const StyledStartButton = styled('button', {
   margin: '0 auto',
   fontSize: '30px',
   padding: '5px 90px 5px 90px',
+  animation: `${visible} 5s`
 });
