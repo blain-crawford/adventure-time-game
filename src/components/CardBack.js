@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+/* eslint-disable react/prop-types */
+import React from 'react';
 import { StyledCard, StyledBackOfCard } from './mui-styles/cardStyles';
 import './mui-styles/fonts.css';
 import './mui-styles/flip.css';

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import adventureTimeFriends from './images/adventure-time-friends.jpeg';
 import ReactAudioPlayer from 'react-audio-player';
 import landingTheme from './music/landing-theme.mp3';

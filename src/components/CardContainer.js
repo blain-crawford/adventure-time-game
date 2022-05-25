@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+/* eslint-disable react/prop-types */
+import React, { useState } from 'react';
 import Card from './Card';
 import CardBack from './CardBack';
 import './mui-styles/flip.css';
@@ -39,7 +40,6 @@ const CardContainer = ({ cardArray, wasChosen }) => {
           } else if (!flipped) {
             return (
               <CardBack
-                className='c'
                 id={cardIndex}
                 key={cardIndex}
                 cardName={card.displayName}

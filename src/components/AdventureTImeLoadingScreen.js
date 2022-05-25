@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import adventureTimeLoading from './images/adventure-time-logo-8bit.png';
 import {
   StyledLoadingPage,

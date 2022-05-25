@@ -6,6 +6,7 @@ import AdventureTimeLandingScreen from './AdventureTimeLandingScreen';
 import AdventureTimeLoadingScreen from './AdventureTImeLoadingScreen';
 import gameBoard from './images/gameboard.jpeg';
 import WinningScreen from './WinningScreen';
+
 const App = () => {
   const [cardArray, setCardArray] = useState([]);
   const [screen, setScreen] = useState('landing');
@@ -44,8 +45,9 @@ const App = () => {
         setScreen('play');
         shuffleCards(details.data);
       })
+      // eslint-disable-next-line no-unused-vars
       .catch((error) => {
-        alert("Cards couldn't load Bro!  Refresh to try again!");
+        alert('Cards couldn\'t load Bro!  Refresh to try again!');
       });
   };
 
