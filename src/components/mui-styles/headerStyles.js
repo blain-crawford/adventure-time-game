@@ -1,5 +1,4 @@
 import { styled } from '@mui/system';
-import { keyframes } from '@mui/styled-engine';
 import adventureFont from '../fonts/adventure-font.ttf';
 
 export const StyledHeader = styled('div', {

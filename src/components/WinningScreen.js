@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import adventureTimeFriends from './images/adventure-time-friends.jpeg';
 import {
   StyledWinningPage,
   StyledStartButton,
