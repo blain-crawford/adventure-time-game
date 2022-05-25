@@ -23,7 +23,7 @@ This project was a part of the <a href="https://www.theodinproject.com/">The Odi
 - <a href='https://babeljs.io/'>babel</a>
 - <a href='https://prettier.io/'>Prettier</a>
 - <a href='https://eslint.org/'>ESLint</a>
-- <a hre="https://axios-http.com/docs/intro">axios</a>
+- <a href="https://axios-http.com/docs/intro">axios</a>
 
 ## Application functionality
 - Load up application on netlify, or clone GitHub repository and use npm run build, and npm run server to build a "build" folder and deploy on loca server
